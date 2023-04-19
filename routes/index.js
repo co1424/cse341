@@ -1,9 +1,9 @@
 const routes = require('express').Router();
-const myController = require('../controllers');
+const namesController = require('../controllers');
 
 
-routes.get('/', myController.greatFunction);
+routes.get('/', namesController.greatGirl);
 
-routes.get('/guapo', myController.returnAnotherPerson);
+routes.get('/guapo', namesController.greatBoy);
 
 module.exports = routes;
