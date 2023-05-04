@@ -1,5 +1,13 @@
+#################################################################################################
+# LOCAL HOST ROUTES:
+#################################################################################################
 # GET REQUEST TO SEE ALL CONTACTS IN THE CONTACT LIST:
+###
 GET http://localhost:3000/contacts HTTP/1.1
+
+# GET REQUEST TO SEE A SINGLE CONTACT IN THE CONTACT LIST:
+###
+GET http://localhost:3000/contact/645309e7867cdd68c443a0dc HTTP/1.1
 
 # POST REQUEST TO ADD A NEW CONTACT TO THE CONTACTS LIST:
 ###
@@ -39,7 +47,7 @@ Content-Type: application/json
 
 # PUT REQUEST TO UPDATE A CONTACT IN THE CONTACT LIST:
 ###
-PUT http://localhost:3000/contact/645309ec867cdd68c443a0de HTTP/1.1
+PUT http://localhost:3000/contact/64530c6e867cdd68c443a0e6 HTTP/1.1
 Content-Type: application/json
 
 {
@@ -48,4 +56,65 @@ Content-Type: application/json
 
 # DELETE REQUEST TO REMOVE A CONTACT FROM THE CONTACT LIST:
 ###
-DELETE http://localhost:3000/contact/645309ec867cdd68c443a0de HTTP/1.1
+DELETE http://localhost:3000/contact/64530c6e867cdd68c443a0e6 HTTP/1.1
+
+
+#################################################################################################
+# RENDER ROUTES:
+#################################################################################################
+# GET REQUEST TO SEE ALL CONTACTS IN THE CONTACT LIST:
+###
+GET https://cse341-dn5l.onrender.com/contacts HTTP/1.1
+
+# GET REQUEST TO SEE A SINGLE CONTACT IN THE CONTACT LIST:
+###
+GET https://cse341-dn5l.onrender.com/contact/645309e7867cdd68c443a0dc HTTP/1.1
+
+# POST REQUEST TO ADD A NEW CONTACT TO THE CONTACTS LIST:
+###
+POST https://cse341-dn5l.onrender.com/contact HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Bob",
+    "lastName": "Marley",
+    "email": "thebob@test.com",
+    "color": "Blue",
+    "birthday": "1964-12-09"
+}
+###
+POST https://cse341-dn5l.onrender.com/contact HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Luis",
+    "lastName": "Borton",
+    "email": "borton@test.com",
+    "color": "Red",
+    "birthday": "1984-06-19"
+
+}
+###
+POST https://cse341-dn5l.onrender.com/contact HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Chase",
+    "lastName": "Forever",
+    "email": "thechase@test.com",
+    "color": "Yellow",
+    "birthday": "1994-11-11"
+}
+
+# PUT REQUEST TO UPDATE A CONTACT IN THE CONTACT LIST:
+###
+PUT https://cse341-dn5l.onrender.com/contact/645309ec867cdd68c443a0de HTTP/1.1
+Content-Type: application/json
+
+{
+    "color": "Bright Blue"
+}
+
+# DELETE REQUEST TO REMOVE A CONTACT FROM THE CONTACT LIST:
+###
+DELETE https://cse341-dn5l.onrender.com/contact/645309ec867cdd68c443a0de HTTP/1.1
