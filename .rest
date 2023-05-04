@@ -1,4 +1,19 @@
-GET http://localhost:3000 HTTP/1.1
-
+// LOCALHOST
 ###
-GET http://localhost:3000/guapo HTTP/1.1
+GET http://localhost:3000/contacts
+###
+GET http://localhost:3000/contacts/644dc56e95c55aedcaaf24de
+###
+GET http://localhost:3000/contacts/644dc59195c55aedcaaf24df
+###
+GET http://localhost:3000/contacts/644dc5a195c55aedcaaf24e0
+
+// PRODUCTION Deploy
+###
+GET https://cse341-dn5l.onrender.com/contacts
+###
+GET https://cse341-dn5l.onrender.com/contacts/644dc56e95c55aedcaaf24de
+###
+GET https://cse341-dn5l.onrender.com/contacts/644dc59195c55aedcaaf24df
+###
+GET https://cse341-dn5l.onrender.com/contacts/644dc5a195c55aedcaaf24e0
