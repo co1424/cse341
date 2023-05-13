@@ -5,7 +5,7 @@ const doc = {
         title: 'My API',
         description: 'Contacts API',
     },
-    host: 'localhost:3000', //use the public url when in production.
+    host: 'https://cse341-dn5l.onrender.com', //use the public url when in production.
     schemes: ['http'],
 };
 
