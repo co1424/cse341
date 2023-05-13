@@ -4,9 +4,15 @@ const bodyParser = require('body-parser');
 const env = require('dotenv').config();
 const mongoose = require('mongoose');
 
-app.use(bodyParser.json());
+const swaggerAutogen = require('swagger-autogen')();
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
 
+
+app.use(bodyParser.json());
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use('/', require('./routes/contacts.js'));
+
 
 /* ***********************
  * Local Server Information
