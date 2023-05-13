@@ -5,7 +5,10 @@
     "description": "Contacts API",
     "version": "1.0.0"
   },
-  "host": "https://cse341-dn5l.onrender.com",
+  "servers": [{
+    "url": "https://cse341-dn5l.onrender.com"
+  }],
+  "host": "http://localhost:3000", 
   "basePath": "/api-docs",
   "schemes": [
     "http"
@@ -72,14 +75,12 @@
     "/contact/{id}": {
       "get": {
         "description": "API KEY IF NEEDED: 02724f6b-aa34-404f-a228-2494451c326c",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
         "responses": {
           "200": {
             "description": "OK"
@@ -91,14 +92,12 @@
       },
       "put": {
         "description": "API KEY IF NEEDED: 02724f6b-aa34-404f-a228-2494451c326c",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
         "responses": {
           "204": {
             "description": "No Content"
@@ -113,14 +112,12 @@
       },
       "delete": {
         "description": "API KEY IF NEEDED: 02724f6b-aa34-404f-a228-2494451c326c",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
         "responses": {
           "200": {
             "description": "OK"
