@@ -5,10 +5,7 @@
     "description": "Contacts API",
     "version": "1.0.0"
   },
-  "servers": [{
-    "url": "https://cse341-dn5l.onrender.com"
-  }],
-  "host": "localhost:3000", 
+  "host": "cse341-dn5l.onrender.com", 
   "basePath": "/",
   "schemes": [
     "http"
