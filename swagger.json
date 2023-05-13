@@ -5,11 +5,9 @@
     "description": "Contacts API",
     "version": "1.0.0"
   },
-  "host": "cse341-dn5l.onrender.com", 
+  "host": "cse341-dn5l.onrender.com",
   "basePath": "/",
-  "schemes": [
-    "https"
-  ],
+  "schemes": ["http", "https"],
   "paths": {
     "/api-docs": {
       "get": {
