@@ -8,8 +8,8 @@
   "servers": [{
     "url": "https://cse341-dn5l.onrender.com"
   }],
-  "host": "http://localhost:3000", 
-  "basePath": "/api-docs",
+  "host": "localhost:3000", 
+  "basePath": "/",
   "schemes": [
     "http"
   ],
