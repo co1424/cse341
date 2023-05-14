@@ -7,7 +7,7 @@
   },
   "host": "cse341-dn5l.onrender.com",
   "basePath": "/",
-  "schemes": ["http", "https"],
+  "schemes": ["https"],
   "paths": {
     "/api-docs": {
       "get": {

@@ -7,7 +7,7 @@ const doc = {
         version: '1.0.0',
     },
     host: 'localhost:3000', //use the public url when in production.
-    schemes: ['http'],
+    schemes: ['https'],
 };
 
 const outputFile = './swagger.json';
