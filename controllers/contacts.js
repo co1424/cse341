@@ -53,7 +53,7 @@ contactsController.updateContactById = async (req, res) => {
     if (!contact) {
       return res.status(404).json({ error: 'Contact not found' });
     } else {
-      const updatedContact = await Contact.findById(id);
+      const updatedContact = await contactsModel.findById(id);
       res.status(204).json(updatedContact);
     }
   } catch (err) {
