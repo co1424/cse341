@@ -1,4 +1,4 @@
-const contactsModel = require('../models/contactsModel');
+const contactsModel = require('../models/contactsModel.js');
 const ObjectId = require('mongodb').ObjectId;
 
 const contactsController = {};

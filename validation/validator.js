@@ -2,13 +2,15 @@ const { body, validationResult } = require('express-validator')
 const contactValidationRules = () => {
   return [
     // firstName must be an string
-    body('firstName').isString(),
+    body('firstName').isString().withMessage('firstName name must be a string'),
     // lastName must be an string
-    body('lastName').isString(),
+    body('lastName').isString().withMessage('lastName must be a string'),
     // email must be an email:
-    body('email').isEmail(),
+    body('email').isEmail().withMessage('Invalid email address'),
+    // color must be a string,
+    body('color').isString().withMessage('color must be a string'),
     // birthday is a date:
-    body('birthday').isDate(),
+    body('birthday').isDate().withMessage('Invalid birthday date'),
   ]
 }
 
@@ -22,7 +24,7 @@ const validate = (req, res, next) => {
   const extractedErrors = []
   errors.array().map(err => extractedErrors.push({ [err.param]: err.msg }))
 
-  return res.status(412).json({
+  return res.status(422).json({
     errors: extractedErrors,
   })
 }

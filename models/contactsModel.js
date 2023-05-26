@@ -16,11 +16,11 @@ const contactsSchema = mongoose.Schema(
         },
         color: {
             type: String,
-            required: [true, 'Favorite color is required'],
+            required: [true, 'Color is required'],
         },
         birthdate: {
             type: Date,
-            required: [false]
+            required: [true]
         },
     }, {
         timestamps: true,
