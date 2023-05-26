@@ -59,11 +59,15 @@ Content-Type: application/json
 
 # PUT REQUEST TO UPDATE A CONTACT IN THE CONTACT LIST:
 ###
-PUT http://localhost:3000/contact/64530c6e867cdd68c443a0e6 HTTP/1.1
+PUT http://localhost:3000/contact/645f0e8a636675a6eb04edbf HTTP/1.1
 Content-Type: application/json
 
 {
-    "color": "Bright Blue"
+    "firstName": "Luis",
+    "lastName": "Birch",
+    "email": "borton@test.com",
+    "color": "Missing",
+    "birthday": "1984-06-19"
 }
 
 # DELETE REQUEST TO REMOVE A CONTACT FROM THE CONTACT LIST:

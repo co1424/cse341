@@ -1,4 +1,5 @@
 const contactsModel = require('../models/contactsModel');
+const ObjectId = require('mongodb').ObjectId;
 
 const contactsController = {};
 
@@ -26,6 +27,10 @@ contactsController.getAllContacts = async (req, res) => {
 };
 // Gets a single contact by id
 contactsController.getContactById = async (req, res) => {
+  // Is the provided ID correct?
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid contact ID to retrieve a contact.');
+  }
   try {
     const { id } = req.params;
     const contact = await contactsModel.findById(id);
@@ -37,6 +42,10 @@ contactsController.getContactById = async (req, res) => {
 
 // Updates a single contact by id
 contactsController.updateContactById = async (req, res) => {
+    // Is the provided ID correct?
+    if (!ObjectId.isValid(req.params.id)) {
+      res.status(400).json('Must use a valid contact ID to update a contact.');
+    }
   try {
     const { id } = req.params;
     const contact = await contactsModel.findByIdAndUpdate(id, req.body);
@@ -54,6 +63,10 @@ contactsController.updateContactById = async (req, res) => {
 
 // Deletes a single contact by id
 contactsController.deleteContactById = async (req, res) => {
+    // Is the provided ID correct?
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid contact ID to delete a contact.');
+  }
   try {
     const { id } = req.params;
     const contact = await contactsModel.findByIdAndDelete(id);

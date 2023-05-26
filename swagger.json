@@ -5,9 +5,9 @@
     "description": "Contacts API",
     "version": "1.0.0"
   },
-  "host": "cse341-dn5l.onrender.com",
+  "host": "localhost:3000",
   "basePath": "/",
-  "schemes": ["https"],
+  "schemes": ["http"],
   "paths": {
     "/api-docs": {
       "get": {
@@ -86,42 +86,56 @@
         }
       },
       "put": {
-        "description": "API KEY IF NEEDED: 02724f6b-aa34-404f-a228-2494451c326c",
+        "description": "",
         "parameters": [{
-          "name": "id",
-          "in": "path",
-          "required": true,
-          "type": "string"
-        }],
-        "responses": {
-          "204": {
-            "description": "No Content"
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
           },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Internal Server Error"
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "example": "any"
+                },
+                "lastName": {
+                  "example": "any"
+                },
+                "email": {
+                  "example": "any"
+                },
+                "color": {
+                  "example": "any"
+                },
+                "birthday": {
+                  "example": "any"
+                }
+              }
+            }
           }
-        }
-      },
-      "delete": {
-        "description": "API KEY IF NEEDED: 02724f6b-aa34-404f-a228-2494451c326c",
-        "parameters": [{
-          "name": "id",
-          "in": "path",
-          "required": true,
-          "type": "string"
-        }],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "500": {
-            "description": "Internal Server Error"
+        ],
+        "delete": {
+          "description": "API KEY IF NEEDED: 02724f6b-aa34-404f-a228-2494451c326c",
+          "parameters": [{
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }],
+          "responses": {
+            "200": {
+              "description": "OK"
+            },
+            "404": {
+              "description": "Not Found"
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
           }
         }
       }
