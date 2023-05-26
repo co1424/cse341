@@ -72,7 +72,7 @@ Content-Type: application/json
 
 # DELETE REQUEST TO REMOVE A CONTACT FROM THE CONTACT LIST:
 ###
-DELETE http://localhost:3000/contact/64530c6e867cdd68c443a0e6 HTTP/1.1
+DELETE http://localhost:3000/contact/6470246712d86ea8a0805257 HTTP/1.1
 
 
 #################################################################################################

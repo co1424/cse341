@@ -118,24 +118,35 @@
             }
           }
         ],
-        "delete": {
-          "description": "API KEY IF NEEDED: 02724f6b-aa34-404f-a228-2494451c326c",
-          "parameters": [{
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }],
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "404": {
-              "description": "Not Found"
-            },
-            "500": {
-              "description": "Internal Server Error"
-            }
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "API KEY IF NEEDED: 02724f6b-aa34-404f-a228-2494451c326c",
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
