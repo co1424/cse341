@@ -9,8 +9,7 @@ const contactValidationRules = () => {
     body('email').isEmail().withMessage('Invalid email address'),
     // color must be a string,
     body('color').isString().withMessage('color must be a string'),
-    // birthday is a date:
-    body('birthday').isDate().withMessage('Invalid birthday date'),
+
   ]
 }
 

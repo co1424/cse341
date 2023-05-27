@@ -36,9 +36,6 @@
               },
               "color": {
                 "example": "any"
-              },
-              "birthday": {
-                "example": "any"
               }
             }
           }
@@ -109,9 +106,6 @@
                   "example": "any"
                 },
                 "color": {
-                  "example": "any"
-                },
-                "birthday": {
                   "example": "any"
                 }
               }

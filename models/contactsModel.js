@@ -18,10 +18,6 @@ const contactsSchema = mongoose.Schema(
             type: String,
             required: [true, 'Color is required'],
         },
-        birthdate: {
-            type: Date,
-            required: [true]
-        },
     }, {
         timestamps: true,
     }
